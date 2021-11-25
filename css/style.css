@@ -1,0 +1,187 @@
+/* Utilities*/
+/* Base */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  color: #191826;
+  font-family: "IBM Plex Sans", sans-serif;
+  background: url(../images/bg-main-desktop.png) no-repeat bottom 10px right 20px border-box, url(../images/bg-pattern-1.svg) no-repeat right top -39px;
+}
+
+/* Typography */
+h1 {
+  font-size: 8.8rem;
+  line-height: 8.8rem;
+  letter-spacing: -0.1rem;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 5.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #191826;
+}
+
+strong {
+  font-weight: 700;
+  font-size: 6.5rem;
+  line-height: 1;
+}
+
+/* Components */
+.btn {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+  letter-spacing: -0.018rem;
+  border-radius: 1.2rem;
+}
+.btn--dark {
+  background: #191826;
+  color: #FCFAF9;
+}
+.btn--dark:hover {
+  background: #66E2DC;
+}
+.btn--light {
+  background: #FCFAF9;
+  color: #191826;
+}
+.btn--light:hover {
+  background: #FFB964;
+}
+
+/* Layout */
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0 30px;
+}
+
+header .logo {
+  padding: 6.2rem 0;
+}
+
+.showcase {
+  max-width: 850px;
+}
+.showcase h1 {
+  margin-top: 6.5rem;
+}
+.showcase p {
+  margin: 4rem 0;
+  font-size: 2rem;
+  line-height: 3.4rem;
+}
+
+.app {
+  height: 60rem;
+  background: url(../images/bg-pattern-2.svg) no-repeat 42% -40px, #191826;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 300px;
+  border-radius: 1.2rem;
+}
+.app__illustration {
+  width: 312px;
+  position: relative;
+  top: -213px;
+  left: 102px;
+}
+.app__subscription {
+  position: relative;
+  top: 90px;
+  width: 446px;
+  height: 625px;
+  padding: 4.8rem 5.6rem;
+  border-radius: 1.2rem;
+  background: #FA7453;
+  color: #FCFAF9;
+  z-index: 100;
+}
+.app__subscription h2 {
+  margin: 1rem 0;
+}
+.app__subscription p {
+  font-size: 2rem;
+  line-height: 3.4rem;
+  margin: 1.2rem 0;
+}
+.app__subscription img {
+  display: inline;
+  height: 2rem;
+  margin-right: 0.8rem;
+  width: auto;
+}
+.app__subscription__price {
+  display: flex;
+  margin: 2.8rem 0;
+  align-items: center;
+}
+.app__subscription__price p {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  letter-spacing: -0.02rem;
+}
+.app__subscription__price strong {
+  margin-right: 1.6rem;
+}
+.app__subscription .btn {
+  margin-top: 1.6rem;
+  align-self: flex-end;
+}
+
+.footer {
+  margin: 20rem 0 5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.footer img {
+  display: inline-block;
+}
+.footer .logo {
+  max-height: 3.2rem;
+}
+.footer__text {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  max-width: 37rem;
+}
+.footer__text a {
+  font-weight: 700;
+}
+.footer__social {
+  justify-self: flex-end;
+  align-self: center;
+}
+.footer__social a {
+  margin-left: 2rem;
+  display: inline-block;
+}
+.footer__social img:hover {
+  filter: invert(56%) sepia(18%) saturate(2179%) hue-rotate(322deg) brightness(105%) contrast(96%);
+}
+
+/*# sourceMappingURL=style.css.map */
