@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-[Solution screenshot - Desktop version](.\images\screenshot\solution-screenshot.png)
+[Solution screenshot - Desktop version](images\screenshot\solution-screenshot.png)
 
 ### Links
 
 - Solution URL: [Git repository](https://github.com/Yunie08/frontend-mentor-equalizer-landing-page-challenge.git)
-- Live Site URL: [Live solution](https://optimistic-kare-1f2128.netlify.app/)
+- Live Site URL: [Live solution](https://competent-murdock-092515.netlify.app)
 
 ## My process
 
