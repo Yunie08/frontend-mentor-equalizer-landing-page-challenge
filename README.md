@@ -29,7 +29,7 @@ Users should be able to:
 
 [Solution screenshot - Desktop version](images\screenshot\solution-screenshot.png)
 
-### Links
+### Links*
 
 - Solution URL: [Git repository](https://github.com/Yunie08/frontend-mentor-equalizer-landing-page-challenge.git)
 - Live Site URL: [Live solution](https://competent-murdock-092515.netlify.app)
