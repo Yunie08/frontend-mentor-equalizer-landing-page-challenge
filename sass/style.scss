@@ -51,12 +51,12 @@ $font-letter-spacing: (
 }
 
 @mixin tablet-and-under {
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 900px) {
         @content;
     }
 }
 @mixin mobile-only {
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 600px) {
         @content;
     }
 }
@@ -73,11 +73,9 @@ $font-letter-spacing: (
 html {
     // 10px div by def of 16px
     font-size: 62.5%;
-    width: 100vw;
 }
 
 body {
-    width: 100%;
     box-sizing: border-box;
     color: $color-dark;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -203,6 +201,7 @@ header {
     }
     @include mobile-only {
         margin-right: 0;
+        margin-top: 0;
         width: 100%;
     }
     p {
@@ -213,41 +212,49 @@ header {
 
 .app {
     height: 60rem;
+    width: 100%;
     background: url(../images/bg-pattern-2.svg) no-repeat 42% -40px, $color-dark;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 300px;
     border-radius: 1.2rem;
-
+    position: relative;
+    @include tablet-and-under() {
+        margin-top: 18rem;
+    }
     @include mobile-only {
         grid-template-columns: 1fr;
+        height: 40rem;
     }
-    .container {
+    &--container {
         @include mobile-only {
             max-width: 100%;
+            width: 100%;
             padding: 0;
         }
     }
 
-    
-
     &__illustration {
         width: 312px;
-        position: relative;
+        position: absolute;
         top: -213px;
-        left: 102px;
-        @include desktop-small {
+        left: calc(20% - 104px); // to center phone picture 104px = picture half width
+        @include tablet-and-under {
             height: 556px;
             width: auto;
+            top: -130px;
         }
         @include mobile-only {
             height: 430px;
             width: auto;
+            left: calc(50vw - 104px); // to center phone picture 104px = picture half width
+            top: -100px;
         }
     }
     &__subscription {
-        position: relative;
+        position: absolute;
         top: 90px;
+        right: calc(8vw);
         width: 446px;
         height: 625px;
         padding: 4.8rem 5.6rem;
@@ -255,8 +262,29 @@ header {
         background: $color-secondary;
         color: $color-light;
         z-index: 100;
+        @include tablet-and-under{
+            padding: 4.8rem;
+            height: auto;
+            width: 400px;
+            right: calc(5vw);
+        }
+        
         @include mobile-only {
             width: 100%;
+            /*max-width: 400px;
+            left:50%; 
+            transform:translateX(-50%);*/ 
+            top: 380px;
+            right: 0;
+            padding: 4.8rem 3.6rem;
+            
+        }
+        .container {
+            max-width: 100%;
+            padding: 0;
+            @include mobile-only {
+                max-width: 400px;
+            }
         }
         h2 {
             margin: 1rem 0; 
@@ -264,6 +292,10 @@ header {
         p {
             @include text-style(txt-p);
             margin: 1.2rem 0;
+            @include tablet-and-under {
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+            }
         }
         img {
             display: inline;
@@ -300,6 +332,7 @@ header {
         grid-template-columns: 2fr 1fr;
     }
     @include mobile-only {
+        margin-top: 65rem;
         grid-template-columns: 1fr;
     }
 

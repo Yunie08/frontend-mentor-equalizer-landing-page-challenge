@@ -10,11 +10,9 @@
 
 html {
   font-size: 62.5%;
-  width: 100vw;
 }
 
 body {
-  width: 100%;
   box-sizing: border-box;
   color: #191826;
   font-family: "IBM Plex Sans", sans-serif;
@@ -26,7 +24,7 @@ body {
     background-size: auto, auto 400px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   body {
     background-size: auto, 0;
     background-position: top -600px right -350px, 0;
@@ -46,14 +44,14 @@ h1 {
     letter-spacing: -0.8px;
   }
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 900px) {
   h1 {
     font-size: 6.4rem;
     line-height: 1;
     letter-spacing: -0.73px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   h1 {
     font-size: 4rem;
     line-height: 4.8rem;
@@ -65,20 +63,20 @@ h2 {
   font-size: 4rem;
   line-height: 5.2rem;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 900px) {
   h2 {
     font-size: 3.2rem;
     line-height: 4rem;
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 900px) {
   p {
     font-size: 1.8rem;
     line-height: 2.8rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   p {
     font-size: 1.6rem;
     line-height: 2.6rem;
@@ -150,9 +148,10 @@ header .logo {
     margin-top: 3rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .showcase {
     margin-right: 0;
+    margin-top: 0;
     width: 100%;
   }
 }
@@ -164,44 +163,57 @@ header .logo {
 
 .app {
   height: 60rem;
+  width: 100%;
   background: url(../images/bg-pattern-2.svg) no-repeat 42% -40px, #191826;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 300px;
   border-radius: 1.2rem;
+  position: relative;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .app {
-    grid-template-columns: 1fr;
+    margin-top: 18rem;
   }
 }
-@media screen and (max-width: 500px) {
-  .app .container {
+@media screen and (max-width: 600px) {
+  .app {
+    grid-template-columns: 1fr;
+    height: 40rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .app--container {
     max-width: 100%;
+    width: 100%;
     padding: 0;
   }
 }
 .app__illustration {
   width: 312px;
-  position: relative;
+  position: absolute;
   top: -213px;
-  left: 102px;
+  left: calc(20% - 104px);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
   .app__illustration {
     height: 556px;
     width: auto;
+    top: -130px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .app__illustration {
     height: 430px;
     width: auto;
+    left: calc(50vw - 104px);
+    top: -100px;
   }
 }
 .app__subscription {
-  position: relative;
+  position: absolute;
   top: 90px;
+  right: 8vw;
   width: 446px;
   height: 625px;
   padding: 4.8rem 5.6rem;
@@ -210,9 +222,32 @@ header .logo {
   color: #FCFAF9;
   z-index: 100;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
+  .app__subscription {
+    padding: 4.8rem;
+    height: auto;
+    width: 400px;
+    right: 5vw;
+  }
+}
+@media screen and (max-width: 600px) {
   .app__subscription {
     width: 100%;
+    /*max-width: 400px;
+    left:50%; 
+    transform:translateX(-50%);*/
+    top: 380px;
+    right: 0;
+    padding: 4.8rem 3.6rem;
+  }
+}
+.app__subscription .container {
+  max-width: 100%;
+  padding: 0;
+}
+@media screen and (max-width: 600px) {
+  .app__subscription .container {
+    max-width: 400px;
   }
 }
 .app__subscription h2 {
@@ -222,6 +257,12 @@ header .logo {
   font-size: 2rem;
   line-height: 3.4rem;
   margin: 1.2rem 0;
+}
+@media screen and (max-width: 900px) {
+  .app__subscription p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
 }
 .app__subscription img {
   display: inline;
@@ -252,13 +293,14 @@ header .logo {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 900px) {
   .footer {
     grid-template-columns: 2fr 1fr;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .footer {
+    margin-top: 65rem;
     grid-template-columns: 1fr;
   }
 }
@@ -281,7 +323,7 @@ header .logo {
   font-size: 1.6rem;
   line-height: 2.6rem;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 900px) {
   .footer__text {
     grid-column: 1;
   }
@@ -290,7 +332,7 @@ header .logo {
   justify-self: flex-end;
   align-self: center;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .footer__social {
     justify-self: start;
   }
@@ -299,7 +341,7 @@ header .logo {
   margin-left: 2rem;
   display: inline-block;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .footer__social a {
     margin: 6.4rem 2rem 4rem 0;
   }
