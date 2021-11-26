@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Git repository](https://github.com/Yunie08/frontend-mentor-equalizer-landing-page-challenge.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://optimistic-kare-1f2128.netlify.app](https://optimistic-kare-1f2128.netlify.app)
 
 ## My process
 
